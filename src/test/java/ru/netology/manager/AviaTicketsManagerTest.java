@@ -1,0 +1,70 @@
+package ru.netology.manager;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import ru.netology.domain.AviaTicket;
+import ru.netology.repository.AviaTicketsRepository;
+
+public class AviaTicketsManagerTest {
+
+    AviaTicketsRepository repo = new AviaTicketsRepository();
+    AviaTicketsManager manager = new AviaTicketsManager(repo);
+    private String LED = "Пулково";
+    private String SVO = "Шереметьево";
+    private String BUD = "Ферихедь";
+    private String TXL = "Тегель";
+    private String MAD = "Барахас";
+    private String LHR = "Хитроу";
+
+
+    AviaTicket ticket1 = new AviaTicket(154, 4355, SVO, LED, 1);
+    AviaTicket ticket2 = new AviaTicket(36, 7745, LED, TXL, 2);
+    AviaTicket ticket3 = new AviaTicket(787, 12467, TXL, SVO, 10);
+    AviaTicket ticket4 = new AviaTicket(12, 9877, BUD, MAD, 3);
+    AviaTicket ticket5 = new AviaTicket(333, 34333, MAD, LHR, 4);
+    AviaTicket ticket6 = new AviaTicket(925, 21999, LHR, BUD, 7);
+
+    @BeforeEach
+    public void setup() {
+        manager.add(ticket1);
+        manager.add(ticket2);
+        manager.add(ticket3);
+        manager.add(ticket4);
+        manager.add(ticket5);
+        manager.add(ticket6);
+    }
+
+    @Test
+    public void shouldSearchByCorrectInfo() {
+        AviaTicket[] expected = {ticket3};
+        AviaTicket[] actual = manager.searchBy(ticket3.getDeparture(), ticket3.getArrival());
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
+    public void shouldSearchByWrongDeparture() {
+        AviaTicket[] expected = manager.searchBy("", "MAD");
+        AviaTicket[] actual = new AviaTicket[] {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSearchByWrongArrival() {
+        AviaTicket[] expected = manager.searchBy("TXL", "");
+        AviaTicket[] actual = new AviaTicket[] {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSearchByWrongDepartureAndArrival() {
+        AviaTicket[] expected = manager.searchBy("", "");
+        AviaTicket[] actual = new AviaTicket[] {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+}
