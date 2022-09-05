@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="253035d6-e7f3-4fe0-8215-096f3da38e51" name="Changes" comment="" />
+    <list default="true" id="253035d6-e7f3-4fe0-8215-096f3da38e51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/AviaTicketsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/AviaTicketsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/manager/AviaTicketsManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/manager/AviaTicketsManagerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +47,71 @@
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AviaTicketsRepositoryTest">
+  <component name="RunManager" selected="JUnit.AviaTicketsManagerTest.shouldFindNoneTickets">
+    <configuration name="AviaTicketsManagerTest.shouldFindNoneTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AviaTickets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.manager" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.manager.AviaTicketsManagerTest" />
+      <option name="METHOD_NAME" value="shouldFindNoneTickets" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AviaTicketsManagerTest.shouldFindOneTicket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AviaTickets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.manager" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.manager.AviaTicketsManagerTest" />
+      <option name="METHOD_NAME" value="shouldFindOneTicket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AviaTicketsManagerTest.shouldFindOnlyOneTicket" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AviaTickets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.manager" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.manager.AviaTicketsManagerTest" />
+      <option name="METHOD_NAME" value="shouldFindOnlyOneTicket" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AviaTicketsManagerTest.shouldFindSeveralTickets" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AviaTickets" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.manager" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.manager.AviaTicketsManagerTest" />
+      <option name="METHOD_NAME" value="shouldFindSeveralTickets" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AviaTicketsRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AviaTickets" />
       <extension name="coverage">
@@ -59,77 +127,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AviaTicketsRepositoryTest.shouldRemoveAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AviaTickets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.repository.AviaTicketsRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldRemoveAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AviaTicketsRepositoryTest.shouldRemoveNotExistingId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AviaTickets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.repository.AviaTicketsRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldRemoveNotExistingId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AviaTicketsRepositoryTest.shouldRemoveOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AviaTickets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.repository.AviaTicketsRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldRemoveOne" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AviaTicketsRepositoryTest.shouldSortByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AviaTickets" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.repository" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.repository.AviaTicketsRepositoryTest" />
-      <option name="METHOD_NAME" value="shouldSortByPrice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AviaTicketsManagerTest.shouldFindNoneTickets" />
+        <item itemvalue="JUnit.AviaTicketsManagerTest.shouldFindOneTicket" />
+        <item itemvalue="JUnit.AviaTicketsManagerTest.shouldFindSeveralTickets" />
+        <item itemvalue="JUnit.AviaTicketsManagerTest.shouldFindOnlyOneTicket" />
         <item itemvalue="JUnit.AviaTicketsRepositoryTest" />
-        <item itemvalue="JUnit.AviaTicketsRepositoryTest.shouldSortByPrice" />
-        <item itemvalue="JUnit.AviaTicketsRepositoryTest.shouldRemoveNotExistingId" />
-        <item itemvalue="JUnit.AviaTicketsRepositoryTest.shouldRemoveAll" />
-        <item itemvalue="JUnit.AviaTicketsRepositoryTest.shouldRemoveOne" />
       </list>
     </recent_temporary>
   </component>

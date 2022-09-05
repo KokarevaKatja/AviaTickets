@@ -30,4 +30,6 @@ public class AviaTicketsManager {
         Arrays.sort(result);
         return result;
     }
+
 }
+

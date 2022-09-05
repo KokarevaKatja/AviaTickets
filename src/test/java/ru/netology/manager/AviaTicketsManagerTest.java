@@ -24,6 +24,8 @@ public class AviaTicketsManagerTest {
     AviaTicket ticket4 = new AviaTicket(12, 9877, BUD, MAD, 3);
     AviaTicket ticket5 = new AviaTicket(333, 34333, MAD, LHR, 4);
     AviaTicket ticket6 = new AviaTicket(925, 21999, LHR, BUD, 7);
+    AviaTicket ticket7 = new AviaTicket(467, 6678, SVO, LED, 1);
+    AviaTicket ticket8 = new AviaTicket(34, 9067, SVO, LED, 1);
 
     @BeforeEach
     public void setup() {
@@ -36,9 +38,9 @@ public class AviaTicketsManagerTest {
     }
 
     @Test
-    public void shouldSearchByCorrectInfo() {
-        AviaTicket[] expected = {ticket3};
-        AviaTicket[] actual = manager.searchBy(ticket3.getDeparture(), ticket3.getArrival());
+    public void shouldFindOneTicket() {
+        AviaTicket[] expected = {ticket6};
+        AviaTicket[] actual = manager.searchBy(LHR, BUD);
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -64,6 +66,26 @@ public class AviaTicketsManagerTest {
     public void shouldSearchByWrongDepartureAndArrival() {
         AviaTicket[] expected = manager.searchBy("", "");
         AviaTicket[] actual = new AviaTicket[] {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindSeveralTickets() {
+        manager.add(ticket7);
+        manager.add(ticket8);
+
+        AviaTicket[] expected = {ticket1, ticket7, ticket8};
+        AviaTicket[] actual = manager.searchBy(SVO, LED);
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void shouldFindNoneTickets() {
+        AviaTicket[] expected = {};
+        AviaTicket[] actual = manager.searchBy(MAD, SVO);
 
         Assertions.assertArrayEquals(expected, actual);
     }
